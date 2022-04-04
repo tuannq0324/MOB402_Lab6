@@ -41,7 +41,12 @@ router.post('/uploadMultiFile',
         const files = req.files;
         upload(req,res,(err)=>{
             if(err) {
-                res.render('index', {mes: err, title: 'Express' });
+                if (err.toString() === 'MulterError: Unexpected field'){
+                    res.render('index', {mes: 'Tối đa 5 file!', title: 'Express' });
+                }
+                else {
+                    res.render('index', {mes: err, title: 'Express' });
+                }
             }
             else {
                 res.render('index', {mes: 'Succes', title: 'Express' });
