@@ -53,7 +53,6 @@ router.post('/uploadMultiFile',
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.sendFile(__dirname + '/index.html');
   res.render('index', {mes:'', title: 'Express' });
 });
 
