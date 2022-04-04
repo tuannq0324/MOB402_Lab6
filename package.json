@@ -17,9 +17,6 @@
     "multer": "^1.4.4"
   },
   "main": "app.js",
-  "devDependencies": {
-    "nodemon": "^2.0.15"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
