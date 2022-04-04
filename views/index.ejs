@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  <form action="/uploadMultiFile" enctype="multipart/form-data" method="post">
+    <input type="file" name="myFile" accept="image/jpeg" multiple>
+    <input type="submit" value="Upload">
+  </form>
+  </body>
+</html>
