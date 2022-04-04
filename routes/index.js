@@ -41,7 +41,7 @@ router.post('/uploadMultiFile',
         const files = req.files;
         upload(req,res,(err)=>{
             if(err) {
-                res.render('index', {mes: 'Only Jpg file', title: 'Express' });
+                res.render('index', {mes: err, title: 'Express' });
             }
             else {
                 res.render('index', {mes: 'Succes', title: 'Express' });
